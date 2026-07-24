@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Peonia</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 20px; color: #1a1a1a; line-height: 1.7; }
+    h1 { color: #2d6a4f; font-size: 1.8rem; margin-bottom: 4px; }
+    h2 { color: #2d6a4f; font-size: 1.2rem; margin-top: 2rem; border-bottom: 1px solid #d8f3dc; padding-bottom: 4px; }
+    h3 { color: #40916c; font-size: 1rem; margin-top: 1.2rem; }
+    .meta { color: #6c757d; font-size: 0.9rem; margin-bottom: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { border: 1px solid #d8f3dc; padding: 8px 12px; text-align: left; }
+    th { background: #d8f3dc; font-weight: 600; }
+    a { color: #2d6a4f; }
+    .back { display: inline-block; margin-bottom: 1.5rem; color: #2d6a4f; text-decoration: none; font-size: 0.9rem; }
+    .back:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d8f3dc; color: #6c757d; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back">← Volver</a>
+  <h1>Política de Privacidad</h1>
+  <p class="meta">Versión 1.0 — Última actualización: 23 de julio de 2026</p>
+
+  <h2>1. Responsable del tratamiento</h2>
+  <table>
+    <tr><th>Campo</th><th>Dato</th></tr>
+    <tr><td>Razón social</td><td>The Stoical Guy SLU</td></tr>
+    <tr><td>CIF</td><td>B-XXXXXXXX</td></tr>
+    <tr><td>Domicilio social</td><td>[DOMICILIO SOCIAL]</td></tr>
+    <tr><td>Correo electrónico</td><td><a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a></td></tr>
+  </table>
+
+  <h2>2. Qué datos recogemos y para qué</h2>
+  <p>Peonia es una aplicación de riego automático que controla dispositivos físicos (hardware ESP32) instalados en tu hogar. Para prestar este servicio recogemos los siguientes datos personales:</p>
+
+  <h3>2.1 Datos de cuenta (autenticación)</h3>
+  <p><strong>Dato recogido:</strong> Dirección de correo electrónico y contraseña (gestionada por Firebase Authentication de Google LLC).</p>
+  <p><strong>Finalidad:</strong> Crear y gestionar tu cuenta de usuario en Peonia; verificar tu identidad; permitirte recuperar el acceso si olvidas tu contraseña.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.b RGPD — ejecución del contrato de servicio. Sin este dato no es posible prestarte el servicio.</p>
+  <p><strong>Plazo de conservación:</strong> Mientras tu cuenta esté activa. Tras solicitar eliminación: máximo 30 días.</p>
+
+  <h3>2.2 Identificador interno de usuario (UID Firebase)</h3>
+  <p><strong>Dato recogido:</strong> Identificador único generado automáticamente por Firebase Authentication al crear tu cuenta.</p>
+  <p><strong>Finalidad:</strong> Vincular internamente tus dispositivos de riego, configuraciones e historial de riegos a tu cuenta.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.b RGPD — ejecución del contrato. Identificador técnico imprescindible.</p>
+  <p><strong>Plazo de conservación:</strong> Mientras la cuenta esté activa + 30 días tras baja.</p>
+
+  <h3>2.3 Token de notificaciones push (FCM Token)</h3>
+  <p><strong>Dato recogido:</strong> Identificador único de dispositivo generado por Firebase Cloud Messaging (FCM) de Google LLC.</p>
+  <p><strong>Finalidad:</strong> Enviarte notificaciones push sobre el estado de tus plantas y dispositivos: alertas de humedad baja, confirmaciones de riego completado, avisos de desconexión del dispositivo.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.b RGPD — ejecución del contrato. Las notificaciones son parte esencial del servicio de monitorización automatizada.</p>
+  <p><strong>Cómo desactivar las notificaciones push:</strong></p>
+  <ul>
+    <li><strong>iOS:</strong> Ajustes → Notificaciones → Peonia → desactiva "Permitir notificaciones"</li>
+    <li><strong>Android:</strong> Ajustes → Aplicaciones → Peonia → Notificaciones → desactiva notificaciones</li>
+    <li><strong>Desde la app:</strong> Ajustes de Peonia → Notificaciones</li>
+  </ul>
+  <p>Si las desactivas, el sistema de riego seguirá funcionando pero no recibirás alertas en tiempo real.</p>
+  <p><strong>Plazo de conservación:</strong> Mientras la cuenta esté activa. Se elimina en 30 días tras baja.</p>
+
+  <h3>2.4 Datos de telemetría de dispositivos (sensores ESP32)</h3>
+  <p><strong>Dato recogido:</strong> Lecturas de los sensores de tus dispositivos de riego: porcentaje de humedad del suelo, caudal de agua por ciclo, marcas de tiempo de cada evento de riego, identificador del dispositivo ESP32.</p>
+  <p><strong>Finalidad:</strong> Mostrar el historial y estado actual en la app; ejecutar reglas de riego automático; analizar consumo de agua y salud de tus plantas.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.b RGPD — ejecución del contrato. Sin estos datos el sistema de riego automático no puede funcionar.</p>
+  <p><strong>Plazo de conservación:</strong> Mientras la cuenta esté activa + 30 días tras baja. Puedes solicitar eliminación del historial sin cerrar cuenta.</p>
+
+  <h3>2.5 Dirección IP de conexión</h3>
+  <p><strong>Dato recogido:</strong> Dirección IP desde la que la app conecta con nuestro servidor backend.</p>
+  <p><strong>Finalidad:</strong> Seguridad del servicio, detección de accesos no autorizados, diagnóstico técnico, prevención de abuso.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.f RGPD — interés legítimo en garantizar la seguridad e integridad técnica del servicio.</p>
+  <p><strong>Plazo de conservación:</strong> Máximo 90 días en logs de servidor.</p>
+
+  <h3>2.6 Datos técnicos del dispositivo móvil</h3>
+  <p><strong>Dato recogido:</strong> Modelo del dispositivo, versión del sistema operativo (iOS/Android) y versión de la app Peonia.</p>
+  <p><strong>Finalidad:</strong> Diagnóstico técnico; mejora de la aplicación; priorización de actualizaciones. No se utilizan para publicidad ni perfilado.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.f RGPD — interés legítimo en mantener la calidad técnica del servicio.</p>
+  <p><strong>Plazo de conservación:</strong> Máximo 12 meses.</p>
+
+  <h2>3. Destinatarios y procesadores de datos</h2>
+
+  <h3>3.1 Google LLC (Firebase)</h3>
+  <p><strong>Servicios utilizados:</strong> Firebase Authentication, Firebase Cloud Messaging (FCM), Firebase Analytics básico.</p>
+  <p><strong>Datos a los que acceden:</strong> Correo electrónico, UID Firebase, token FCM, datos técnicos del dispositivo.</p>
+  <p><strong>DPA:</strong> Google LLC dispone de términos de procesamiento de datos en <a href="https://firebase.google.com/terms/data-processing-terms" target="_blank">firebase.google.com/terms/data-processing-terms</a>.</p>
+  <p><strong>Transferencia internacional:</strong> Google LLC está en Estados Unidos. La transferencia está amparada por las Cláusulas Contractuales Tipo (Decisión 2021/914/UE) y la adhesión de Google al Marco de Privacidad de Datos UE-EE.UU. (EU-US Data Privacy Framework, vigente desde julio 2023).</p>
+  <p>Más información: <a href="https://privacy.google.com/businesses/gdprservices/" target="_blank">privacy.google.com/businesses/gdprservices</a></p>
+
+  <h3>3.2 Infraestructura propia (servidor backend)</h3>
+  <p>The Stoical Guy SLU opera su propio servidor backend (Node.js/TypeScript) y base de datos (PostgreSQL). El servidor está ubicado en [PAÍS/REGIÓN DEL SERVIDOR — pendiente de completar] y accesible mediante conexión cifrada.</p>
+  <p><strong>Datos almacenados:</strong> UID Firebase, token FCM, datos de telemetría, IP en logs.</p>
+  <p>No cedemos tus datos a terceros fuera de los procesadores descritos. No vendemos datos. No realizamos perfilado para publicidad.</p>
+
+  <h2>4. Plazos de conservación (resumen)</h2>
+  <table>
+    <tr><th>Dato</th><th>Plazo</th></tr>
+    <tr><td>Email y UID Firebase</td><td>Mientras la cuenta esté activa + 30 días tras baja</td></tr>
+    <tr><td>Token FCM</td><td>Mientras la cuenta esté activa + 30 días tras baja</td></tr>
+    <tr><td>Telemetría de dispositivos</td><td>Mientras la cuenta esté activa + 30 días tras baja</td></tr>
+    <tr><td>IP en logs de servidor</td><td>90 días desde el registro</td></tr>
+    <tr><td>Datos técnicos del dispositivo móvil</td><td>12 meses desde la recogida</td></tr>
+  </table>
+
+  <h2>5. Tus derechos como interesado</h2>
+  <p>De acuerdo con los artículos 15 a 21 del RGPD, tienes los siguientes derechos:</p>
+  <ul>
+    <li><strong>Acceso (Art. 15):</strong> Obtener confirmación y copia de tus datos.</li>
+    <li><strong>Rectificación (Art. 16):</strong> Corregir datos inexactos o incompletos.</li>
+    <li><strong>Supresión — "derecho al olvido" (Art. 17):</strong> Solicitar eliminación de tus datos cuando ya no sean necesarios o retires el consentimiento.</li>
+    <li><strong>Limitación del tratamiento (Art. 18):</strong> Solicitar que limitemos el uso de tus datos en determinadas circunstancias.</li>
+    <li><strong>Portabilidad (Art. 20):</strong> Recibir tus datos en formato estructurado y legible por máquina (historial de riegos, configuración de dispositivos).</li>
+    <li><strong>Oposición (Art. 21):</strong> Para tratamientos basados en interés legítimo (IP en logs, datos técnicos del dispositivo), oponerte en cualquier momento.</li>
+  </ul>
+  <p><strong>Cómo ejercer tus derechos:</strong> Envía un correo a <a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a> indicando el derecho que deseas ejercer y el correo de tu cuenta Peonia. Responderemos en el plazo máximo de un mes (Art. 12.3 RGPD).</p>
+
+  <h2>6. Derecho a reclamar ante la autoridad de control</h2>
+  <p>Si consideras que el tratamiento de tus datos infringe el RGPD, puedes presentar reclamación ante la Agencia Española de Protección de Datos (AEPD):</p>
+  <ul>
+    <li>Sede: C/ Jorge Juan, 6, 28001 Madrid</li>
+    <li>Web: <a href="https://www.aepd.es" target="_blank">www.aepd.es</a></li>
+    <li>Formulario: <a href="https://sedeagpd.gob.es" target="_blank">sedeagpd.gob.es</a></li>
+  </ul>
+
+  <h2>7. Dispositivos físicos de riego (ESP32) y telemetría</h2>
+  <p>Los dispositivos ESP32 de Peonia generan datos de telemetría (humedad del suelo, caudal, timestamps) que se transmiten desde el dispositivo a nuestro servidor via WiFi doméstica mediante conexión cifrada (TLS).</p>
+  <p><strong>Datos que NO recogemos de los dispositivos:</strong></p>
+  <ul>
+    <li>No accedemos a tu red WiFi ni a otros dispositivos de tu red doméstica</li>
+    <li>No recogemos datos de ubicación GPS</li>
+    <li>No activamos micrófonos ni cámaras</li>
+    <li>No accedemos a datos fuera de los sensores de humedad y caudal del propio dispositivo Peonia</li>
+  </ul>
+  <p>Puedes solicitar exportación de tu historial de telemetría en formato estructurado contactando a <a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a>.</p>
+
+  <h2>8. Seguridad de los datos</h2>
+  <p>Aplicamos medidas técnicas y organizativas conforme al Art. 32 del RGPD:</p>
+  <ul>
+    <li>Comunicaciones cifradas mediante TLS entre la app, los dispositivos ESP32 y el servidor backend</li>
+    <li>Autenticación segura gestionada por Firebase Authentication (contraseñas no almacenadas en texto plano)</li>
+    <li>Acceso al servidor backend restringido mediante red privada</li>
+    <li>Base de datos sin exposición directa a Internet</li>
+  </ul>
+  <p>En caso de violación de seguridad que entrañe riesgo, lo notificaremos a la AEPD en un plazo máximo de 72 horas (Art. 33 RGPD) y a ti sin dilación indebida si el riesgo es alto (Art. 34 RGPD).</p>
+
+  <h2>9. Menores de edad</h2>
+  <p>El servicio Peonia no está dirigido a menores de 14 años. Si eres padre, madre o tutor y crees que un menor ha proporcionado datos sin consentimiento, contacta con nosotros en <a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a>.</p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>Podemos actualizar esta Política de Privacidad para reflejar cambios en el servicio o en la legislación. Actualizaremos la fecha de "Última actualización" y, si los cambios son significativos, te lo notificaremos mediante la aplicación o por correo electrónico.</p>
+
+  <footer>
+    <p>Última actualización: 23 de julio de 2026 · The Stoical Guy SLU · <a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a></p>
+    <p><a href="aviso-legal.html">Aviso Legal</a> · <a href="index.html">Inicio</a></p>
+  </footer>
+</body>
+</html>
