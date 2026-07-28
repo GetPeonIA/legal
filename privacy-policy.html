@@ -22,7 +22,7 @@
 <body>
   <a href="index.html" class="back">← Volver</a>
   <h1>Política de Privacidad</h1>
-  <p class="meta">Versión 1.0 — Última actualización: 23 de julio de 2026</p>
+  <p class="meta">Versión 1.1 — Última actualización: 28 de julio de 2026</p>
 
   <h2>1. Responsable del tratamiento</h2>
   <table>
@@ -62,7 +62,7 @@
   <p><strong>Plazo de conservación:</strong> Mientras la cuenta esté activa. Se elimina en 30 días tras baja.</p>
 
   <h3>2.4 Datos de telemetría de dispositivos (sensores ESP32)</h3>
-  <p><strong>Dato recogido:</strong> Lecturas de los sensores de tus dispositivos de riego: porcentaje de humedad del suelo, caudal de agua por ciclo, marcas de tiempo de cada evento de riego, identificador del dispositivo ESP32.</p>
+  <p><strong>Dato recogido:</strong> Lecturas de los sensores de tus dispositivos de riego: porcentaje de humedad del suelo, temperatura, humedad ambiental, nivel de luz, nivel del depósito de agua, caudal de agua por ciclo, marcas de tiempo de cada evento de riego, identificador del dispositivo ESP32.</p>
   <p><strong>Finalidad:</strong> Mostrar el historial y estado actual en la app; ejecutar reglas de riego automático; analizar consumo de agua y salud de tus plantas.</p>
   <p><strong>Base jurídica:</strong> Art. 6.1.b RGPD — ejecución del contrato. Sin estos datos el sistema de riego automático no puede funcionar.</p>
   <p><strong>Plazo de conservación:</strong> Mientras la cuenta esté activa + 30 días tras baja. Puedes solicitar eliminación del historial sin cerrar cuenta.</p>
@@ -79,6 +79,26 @@
   <p><strong>Base jurídica:</strong> Art. 6.1.f RGPD — interés legítimo en mantener la calidad técnica del servicio.</p>
   <p><strong>Plazo de conservación:</strong> Máximo 12 meses.</p>
 
+  <h3>2.7 Fotos de tus plantas</h3>
+  <p><strong>Dato recogido:</strong> Fotografías que tú decides subir de tus plantas, desde la cámara o la galería de tu dispositivo, junto con su fecha de subida.</p>
+  <p><strong>Finalidad:</strong> Permitirte hacer un seguimiento visual de la evolución de cada planta dentro de la app.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.b RGPD — ejecución del contrato. Función opcional: la app funciona sin subir fotos.</p>
+  <p><strong>Permisos:</strong> La cámara y la galería solo se acceden cuando tú lo inicias desde la app. No se accede a otras fotos de tu galería ni se activa la cámara en segundo plano.</p>
+  <p><strong>Plazo de conservación:</strong> Hasta que elimines la foto o la planta asociada, o des de baja tu cuenta (+ 30 días).</p>
+
+  <h3>2.8 Ubicación del jardín</h3>
+  <p><strong>Dato recogido:</strong> Coordenadas (latitud y longitud) del lugar donde está tu jardín, introducidas por ti al crear el jardín (por búsqueda de dirección o selección manual).</p>
+  <p><strong>Finalidad:</strong> Calcular las horas de amanecer y atardecer de tu zona para programar los riegos en el momento óptimo del día.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.b RGPD — ejecución del contrato.</p>
+  <p><strong>Importante:</strong> No es geolocalización GPS ni seguimiento de tu posición: es una ubicación fija que tú defines. La app no rastrea tu ubicación en tiempo real.</p>
+  <p><strong>Plazo de conservación:</strong> Mientras la cuenta esté activa + 30 días tras baja.</p>
+
+  <h3>2.9 Analítica de uso (opcional, con consentimiento)</h3>
+  <p><strong>Dato recogido:</strong> Eventos de uso de la app (pantallas visitadas, acciones principales) asociados a un identificador anónimo.</p>
+  <p><strong>Finalidad:</strong> Entender cómo se usa la app para mejorarla. No se usa para publicidad ni se vende a terceros.</p>
+  <p><strong>Base jurídica:</strong> Art. 6.1.a RGPD — consentimiento. La analítica solo se activa si la aceptas, y puedes retirarla en cualquier momento desde Ajustes de la app; al hacerlo se detiene por completo (incluidas Firebase Analytics, PostHog y Sentry).</p>
+  <p><strong>Plazo de conservación:</strong> Según la política del procesador (PostHog); datos agregados o anonimizados.</p>
+
   <h2>3. Destinatarios y procesadores de datos</h2>
 
   <h3>3.1 Google LLC (Firebase)</h3>
@@ -90,8 +110,24 @@
 
   <h3>3.2 Infraestructura propia (servidor backend)</h3>
   <p>The Stoical Guy SLU opera su propio servidor backend (Node.js/TypeScript) y base de datos (PostgreSQL) ubicados en España, dentro del Espacio Económico Europeo. No se producen transferencias internacionales de datos para este procesador.</p>
-  <p><strong>Datos almacenados:</strong> UID Firebase, token FCM, datos de telemetría, IP en logs.</p>
+  <p><strong>Datos almacenados:</strong> UID Firebase, token FCM, datos de telemetría, fotos de plantas, ubicación del jardín, IP en logs.</p>
   <p>No cedemos tus datos a terceros fuera de los procesadores descritos. No vendemos datos. No realizamos perfilado para publicidad.</p>
+
+  <h3>3.3 Sentry (Functional Software, Inc.)</h3>
+  <p><strong>Servicio utilizado:</strong> Sentry (sentry.io) para informes de errores y caídas de la app.</p>
+  <p><strong>Datos a los que acceden:</strong> Información técnica del error (traza, modelo del dispositivo, versión del SO y de la app). No incluye contenido de usuario ni fotos.</p>
+  <p><strong>Activación:</strong> Solo si aceptas la analítica (ver 2.9).</p>
+  <p><strong>Transferencia internacional:</strong> EE.UU., amparada por Cláusulas Contractuales Tipo. Más información: <a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a>.</p>
+
+  <h3>3.4 PostHog (PostHog, Inc.)</h3>
+  <p><strong>Servicio utilizado:</strong> PostHog para analítica de uso de la app (ver 2.9).</p>
+  <p><strong>Datos a los que acceden:</strong> Eventos de uso con identificador anónimo y datos técnicos del dispositivo.</p>
+  <p><strong>Activación:</strong> Solo con tu consentimiento, revocable en Ajustes.</p>
+  <p><strong>Transferencia internacional:</strong> EE.UU./UE según región contratada, amparada por Cláusulas Contractuales Tipo. Más información: <a href="https://posthog.com/privacy" target="_blank">posthog.com/privacy</a>.</p>
+
+  <h3>3.5 Servicios de datos externos (sin identificación de usuario)</h3>
+  <p><strong>sunrise-sunset.org:</strong> Recibe únicamente las coordenadas del jardín para calcular las horas de amanecer y atardecer. No recibe ningún identificador de usuario ni de cuenta.</p>
+  <p><strong>Photon (photon.komoot.io):</strong> Recibe el texto de búsqueda que introduces al localizar tu jardín (geocodificación de direcciones). No recibe identificadores de usuario.</p>
 
   <h2>4. Plazos de conservación (resumen)</h2>
   <table>
@@ -99,6 +135,8 @@
     <tr><td>Email y UID Firebase</td><td>Mientras la cuenta esté activa + 30 días tras baja</td></tr>
     <tr><td>Token FCM</td><td>Mientras la cuenta esté activa + 30 días tras baja</td></tr>
     <tr><td>Telemetría de dispositivos</td><td>Mientras la cuenta esté activa + 30 días tras baja</td></tr>
+    <tr><td>Fotos de plantas</td><td>Hasta que las elimines o des de baja la cuenta + 30 días</td></tr>
+    <tr><td>Ubicación del jardín</td><td>Mientras la cuenta esté activa + 30 días tras baja</td></tr>
     <tr><td>IP en logs de servidor</td><td>90 días desde el registro</td></tr>
     <tr><td>Datos técnicos del dispositivo móvil</td><td>12 meses desde la recogida</td></tr>
   </table>
@@ -124,13 +162,13 @@
   </ul>
 
   <h2>7. Dispositivos físicos de riego (ESP32) y telemetría</h2>
-  <p>Los dispositivos ESP32 de Peonia generan datos de telemetría (humedad del suelo, caudal, timestamps) que se transmiten desde el dispositivo a nuestro servidor via WiFi doméstica mediante conexión cifrada (TLS).</p>
+  <p>Los dispositivos ESP32 de Peonia generan datos de telemetría (humedad del suelo, temperatura, humedad ambiental, luz, nivel de depósito, caudal, timestamps) que se transmiten desde el dispositivo a nuestro servidor via WiFi doméstica mediante conexión cifrada (TLS).</p>
   <p><strong>Datos que NO recogemos de los dispositivos:</strong></p>
   <ul>
     <li>No accedemos a tu red WiFi ni a otros dispositivos de tu red doméstica</li>
-    <li>No recogemos datos de ubicación GPS</li>
-    <li>No activamos micrófonos ni cámaras</li>
-    <li>No accedemos a datos fuera de los sensores de humedad y caudal del propio dispositivo Peonia</li>
+    <li>No recogemos tu ubicación GPS ni rastreamos tu posición (la ubicación del jardín la introduces tú manualmente, ver 2.8)</li>
+    <li>No activamos micrófonos; la cámara solo se usa cuando tú haces una foto a tu planta (ver 2.7)</li>
+    <li>No accedemos a datos fuera de los sensores del propio dispositivo Peonia</li>
   </ul>
   <p>Puedes solicitar exportación de tu historial de telemetría en formato estructurado contactando a <a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a>.</p>
 
@@ -151,7 +189,7 @@
   <p>Podemos actualizar esta Política de Privacidad para reflejar cambios en el servicio o en la legislación. Actualizaremos la fecha de "Última actualización" y, si los cambios son significativos, te lo notificaremos mediante la aplicación o por correo electrónico.</p>
 
   <footer>
-    <p>Última actualización: 23 de julio de 2026 · The Stoical Guy SLU · <a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a></p>
+    <p>Última actualización: 28 de julio de 2026 · The Stoical Guy SLU · <a href="mailto:jcnavio@gmail.com">jcnavio@gmail.com</a></p>
     <p><a href="aviso-legal.html">Aviso Legal</a> · <a href="index.html">Inicio</a></p>
   </footer>
 </body>
